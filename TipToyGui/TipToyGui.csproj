@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B51FA4B8-84CE-4616-AC47-002F96A8EA00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TipToyGui</RootNamespace>
+    <AssemblyName>TipToyGui</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CMD.cs" />
+    <Compile Include="Common\PlayTTTool.cs" />
+    <Compile Include="Common\Polygon.cs" />
+    <Compile Include="Common\PolygonCollision.cs" />
+    <Compile Include="CustomControls\GfxPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\NumUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\NumUpDown.Designer.cs">
+      <DependentUpon>NumUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmSpeak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmSpeak.Designer.cs">
+      <DependentUpon>frmSpeak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmComment.Designer.cs">
+      <DependentUpon>frmComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsEditor\frmGraficsEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphicsEditor\frmGraficsEditor.Designer.cs">
+      <DependentUpon>frmGraficsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmScene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmScene.Designer.cs">
+      <DependentUpon>frmScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmNodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmNodes.Designer.cs">
+      <DependentUpon>frmNodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmProject.Designer.cs">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmTTToolPlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmTTToolPlay.Designer.cs">
+      <DependentUpon>frmTTToolPlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmTTTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmTTTool.Designer.cs">
+      <DependentUpon>frmTTTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmTTToolCreateOID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmTTToolCreateOID.Designer.cs">
+      <DependentUpon>frmTTToolCreateOID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmTTToolSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmTTToolSetup.Designer.cs">
+      <DependentUpon>frmTTToolSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TTDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphicsEditor\FrmGraphicsEditor.DbDrawSpace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.ContextMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.ToolstripEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaskPicture.cs" />
+    <Compile Include="Nodes\TimerNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\TimerNode.Designer.cs">
+      <DependentUpon>TimerNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\NegNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\IPriority.cs" />
+    <Compile Include="Nodes\JumpNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\JumpNode.Designer.cs">
+      <DependentUpon>JumpNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\MediaNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\MediaNode.Designer.cs">
+      <DependentUpon>MediaNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\ManipulationNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ManipulationNode.Designer.cs">
+      <DependentUpon>ManipulationNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\BaseNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\BoolNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Connection\ConnectionPoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Connection\ConnectionPoint.Designer.cs">
+      <DependentUpon>ConnectionPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection\ConnectionPair.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\GraphicalOverlay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GraphicalOverlay.designer.cs" />
+    <Compile Include="CustomControls\NodePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\HeadLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\HeadLabel.Designer.cs">
+      <DependentUpon>HeadLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\NodeSetup.cs" />
+    <Compile Include="Nodes\TextSequenceNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\TextSequenceNode.Designer.cs">
+      <DependentUpon>TextSequenceNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\SequenceNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\SequenceNode.Designer.cs">
+      <DependentUpon>SequenceNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\SpeakNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\SpeakNode.Designer.cs">
+      <DependentUpon>SpeakNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\ValueNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ValueNode.Designer.cs">
+      <DependentUpon>ValueNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OidClasses\IOIDAction.cs" />
+    <Compile Include="OidClasses\IOIDCondition.cs" />
+    <Compile Include="Dialogs\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OidClasses\OIDActionJump.cs" />
+    <Compile Include="OidClasses\OIDActionOID.cs" />
+    <Compile Include="OidClasses\OIDActionPlaySound.cs" />
+    <Compile Include="OidClasses\OIDTimer.cs" />
+    <Compile Include="OidClasses\OIDActionValue.cs" />
+    <Compile Include="OidClasses\OIDConditionOID.cs" />
+    <Compile Include="OidClasses\OIDConditionValue.cs" />
+    <Compile Include="OidClasses\OIDMedia.cs" />
+    <Compile Include="OidClasses\OIDNegate.cs" />
+    <Compile Include="OidClasses\OIDNode.cs" />
+    <Compile Include="OidClasses\OIDProject.cs" />
+    <Compile Include="OidClasses\OIDRegister.cs" />
+    <Compile Include="OidClasses\OIDTextSequence.cs" />
+    <Compile Include="OidClasses\OIDSequence.cs" />
+    <Compile Include="Common\PerfMon.cs" />
+    <Compile Include="Common\PointExtensions.cs" />
+    <Compile Include="OidClasses\OIDSpeak.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\RectangleExtensions.cs" />
+    <Compile Include="Nodes\RegisterNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\RegisterNode.Designer.cs">
+      <DependentUpon>RegisterNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsEditor\Scene.cs" />
+    <Compile Include="GraphicsEditor\SceneOid.cs" />
+    <Compile Include="TTToolCommon\TTGRegistry.cs" />
+    <Compile Include="TTToolCommon\TTImage.cs" />
+    <Compile Include="TTToolCommon\TTTool.cs" />
+    <Compile Include="TTToolCommon\TTToolSettings.cs" />
+    <EmbeddedResource Include="Dialogs\frmSpeak.resx">
+      <DependentUpon>frmSpeak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmComment.resx">
+      <DependentUpon>frmComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsEditor\frmGraficsEditor.resx">
+      <DependentUpon>frmGraficsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmScene.resx">
+      <DependentUpon>frmScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmNodes.resx">
+      <DependentUpon>frmNodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmProject.resx">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmTTToolPlay.resx">
+      <DependentUpon>frmTTToolPlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmTTTool.resx">
+      <DependentUpon>frmTTTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmTTToolCreateOID.resx">
+      <DependentUpon>frmTTToolCreateOID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmTTToolSetup.resx">
+      <DependentUpon>frmTTToolSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\BaseNode.resx">
+      <DependentUpon>BaseNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\TimerNode.resx">
+      <DependentUpon>TimerNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\NegNode.resx">
+      <DependentUpon>NegNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\JumpNode.resx">
+      <DependentUpon>JumpNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\MediaNode.resx">
+      <DependentUpon>MediaNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\ManipulationNode.resx">
+      <DependentUpon>ManipulationNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\BoolNode.resx">
+      <DependentUpon>BoolNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connection\ConnectionPoint.resx">
+      <DependentUpon>ConnectionPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\TextSequenceNode.resx">
+      <DependentUpon>TextSequenceNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\SequenceNode.resx">
+      <DependentUpon>SequenceNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\SpeakNode.resx">
+      <DependentUpon>SpeakNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\ValueNode.resx">
+      <DependentUpon>ValueNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Nodes\RegisterNode.resx">
+      <DependentUpon>RegisterNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GraphicsEditor\FrmGraphicsEditor.TsEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TipToi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TipToiPlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TipToiStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Tip.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_NewPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_NewPointInLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MovPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewPointInLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_DelPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_MovPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_NewPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_NewPointInLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DelPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_DelPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_MovPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_imgMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_imgMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgRotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgScale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_imgMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_imgRotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_imgScale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_imgMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_imgRotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_imgScale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sceneSave.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
