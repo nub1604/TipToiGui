@@ -29,7 +29,7 @@ namespace TipToyGui
             }
         }
 
-        public static void CreateImage(OIDProject oIDProject, Scene scene, TTToolSettings set)
+        public static void CreateImage(OIDProject oIDProject, Scene scene, TTToolSettings set, bool highquality)
         {
             if (scene == null || scene.TTImages == null || scene.TTImages.Count == 0) return;
 
@@ -46,7 +46,7 @@ namespace TipToyGui
                     foreach (var img in scene.TTImages)
                         img.Draw(graphic, 1);
                 }
-                scenePicture.Save(Path.Combine(destDir, $"{scene.Name}.jpg"), ImageFormat.Jpeg);
+                scenePicture.Save(Path.Combine(destDir, $"{scene.Name}.png"), ImageFormat.Png);
             }
 
             string workdir = Path.Combine(oIDProject.ProjectPath, "temp");
@@ -59,8 +59,8 @@ namespace TipToyGui
             {
                 using (Graphics graphic = Graphics.FromImage(maskPicture))
                 {
-                    DrawSeceneOids(oIDProject, scene, set, workdir, maskPicture, graphic);
-                    DrawStartOids(oIDProject, scene, set, workdir, maskPicture, graphic);
+                    DrawSeceneOids(oIDProject, scene, set, workdir, maskPicture, graphic, highquality);
+                    DrawStartOids(oIDProject, scene, set, workdir, maskPicture, graphic, highquality);
                 }
 
 
@@ -68,7 +68,7 @@ namespace TipToyGui
             }
         }
 
-        private static void DrawSeceneOids(OIDProject oIDProject, Scene scene, TTToolSettings set, string workdir, Bitmap maskPicture, Graphics graphic)
+        private static void DrawSeceneOids(OIDProject oIDProject, Scene scene, TTToolSettings set, string workdir, Bitmap maskPicture, Graphics graphic, bool highquality)
         {
             foreach (SceneOid sc in scene.SceneOids)
             {
@@ -76,21 +76,21 @@ namespace TipToyGui
                 set.CodeDim = new Size(1, 1);
                 var res = TTTool.CreateOidCodes(set, (short)ns.OID, workdir);
                 var MaskImage = Bitmap.FromFile(res);
-                DrawPolygons(maskPicture, graphic, sc, MaskImage);
+                DrawPolygons(maskPicture, graphic, sc, MaskImage, highquality);
             }
         }
-        private static void DrawStartOids(OIDProject oIDProject, Scene scene, TTToolSettings set, string workdir, Bitmap maskPicture, Graphics graphic)
+        private static void DrawStartOids(OIDProject oIDProject, Scene scene, TTToolSettings set, string workdir, Bitmap maskPicture, Graphics graphic, bool highquality)
         {
             if (scene.StartOid != null && scene.StartOid.Polygons != null && scene.StartOid.Polygons.Count > 0)
             {
                 set.CodeDim = new Size(1, 1);
                 var res = TTTool.CreateOidCodes(set, oIDProject.ProductID, workdir);
                 var MaskImage = Bitmap.FromFile(res);
-                DrawPolygons(maskPicture, graphic, scene.StartOid, MaskImage);
+                DrawPolygons(maskPicture, graphic, scene.StartOid, MaskImage, highquality);
             }
         }
         
-        private static void DrawPolygons(Bitmap maskPicture, Graphics graphic, SceneOid sc, Image MaskImage)
+        private static void DrawPolygons(Bitmap maskPicture, Graphics graphic, SceneOid sc, Image MaskImage, bool highquality)
         {
             foreach (Polygon pl in sc.Polygons)
             {
@@ -109,8 +109,12 @@ namespace TipToyGui
                         int ci = CountEdges(pl, x, y, width, height);
                         if (ci == 4)
                         {
-                            graphic.DrawImage(MaskImage, x, y, width, height);
-                        }
+                            if (highquality)
+                           
+                            DrawFull(pl, (Bitmap)MaskImage, maskPicture, (int)x, (int)y);
+                            else
+                                 graphic.DrawImage(MaskImage, x, y, width, height);
+            }
                         else if (ci > 0)
                         {
                             DrawEdge(pl, (Bitmap)MaskImage, maskPicture, (int)x, (int)y);
@@ -147,7 +151,20 @@ namespace TipToyGui
             }
         }
 
+public static void DrawFull(Polygon p, Bitmap mask, Bitmap dest, int ox, int oy)
+        {
+            for (int x = 0; x < mask.Width; x++)
+            {
+                for (int y = 0; y < mask.Height ; y++)
+                {
+                  
+                        if (ox + x > 0 && ox + x < dest.Width && oy + y > 0 && oy + y < dest.Height )
 
+                        dest.SetPixel(ox + x, oy + y,mask.GetPixel(x, y));
+                    
+                }
+            }
+        }
 
     }
 }

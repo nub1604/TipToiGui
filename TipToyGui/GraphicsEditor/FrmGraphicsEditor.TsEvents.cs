@@ -109,8 +109,15 @@ namespace TipToyGui
 
 
                 tTToolSettings.DPI = selectedScene.ResolutionDPI;
-
-                MaskPicture.CreateImage(MainForm.Project, selectedScene, tTToolSettings);
+                var res = MessageBox.Show(this, "Generate Oid Pixel by Pixel, takes ~2min", "", MessageBoxButtons.YesNoCancel);
+                if (res == DialogResult.Yes)
+                {
+                    MaskPicture.CreateImage(MainForm.Project, selectedScene, tTToolSettings, true);
+                }
+                else if ( res == DialogResult.No)
+                {
+                    MaskPicture.CreateImage(MainForm.Project, selectedScene, tTToolSettings, false);
+                }
             }
         }
         void ActivateTSEditorMode(EnumPolyEditMode mode)
