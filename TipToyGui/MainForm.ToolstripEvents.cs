@@ -11,7 +11,7 @@ namespace TipToyGui
 {
     public partial class MainForm
     {
-
+        public const string FILTERPROJECT = "tiptoigui project files(*.)|*.ttproj";
         private void SetupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var s = new frmTTToolSetup())
@@ -109,6 +109,40 @@ namespace TipToyGui
                     }
                 }
                 Flash(tbStatusLabel, 500, Color.Green, 3);
+            }
+        }
+        private void RefreshRecentItems()
+        {
+            MenuRecent.DropDownItems.Clear();
+            foreach (var item in TTGRegistry.GetRecentProjectPath())
+            {
+                var mi = new ToolStripMenuItem(item);
+                mi.Click += (_, __) =>
+                {
+                    Project = OIDProject.Load(item);
+                    RefreshNodes();
+                    RefreshOid();
+
+                    if (lbOidCodes.Items != null && lbOidCodes.Items.Count > 0)
+                        lbOidCodes.SelectedIndex = 0;
+                };
+                MenuRecent.DropDownItems.Add(mi);
+            }
+        }
+        private void loadProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var ofd = new OpenFileDialog())
+            {
+                ofd.Filter = FILTERPROJECT;
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    Project = OIDProject.Load(ofd.FileName);
+                    RefreshNodes();
+                    RefreshOid();
+
+                    if (lbOidCodes.Items != null && lbOidCodes.Items.Count > 0)
+                        lbOidCodes.SelectedIndex = 0;
+                }
             }
         }
     }

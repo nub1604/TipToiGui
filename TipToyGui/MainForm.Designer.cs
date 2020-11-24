@@ -42,6 +42,7 @@
             this.tsProjectSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.createYamlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createGMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graphicEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speakEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@
             this.tbStatusLabel = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.nodePanel1 = new TipToyGui.NodePanel();
-            this.createGMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nodePanel1)).BeginInit();
@@ -151,6 +152,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newProjectToolStripMenuItem,
             this.saveProjectToolStripMenuItem,
+            this.loadProjectToolStripMenuItem,
             this.MenuRecent,
             this.tsProjectSettings,
             this.toolStripSeparator1,
@@ -199,6 +201,13 @@
             this.createYamlToolStripMenuItem.Text = "Create Yaml";
             this.createYamlToolStripMenuItem.Click += new System.EventHandler(this.createYamlToolStripMenuItem_Click);
             // 
+            // createGMEToolStripMenuItem
+            // 
+            this.createGMEToolStripMenuItem.Name = "createGMEToolStripMenuItem";
+            this.createGMEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createGMEToolStripMenuItem.Text = "Create GME";
+            this.createGMEToolStripMenuItem.Click += new System.EventHandler(this.createGMEToolStripMenuItem_Click);
+            // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -211,14 +220,14 @@
             // graphicEditorToolStripMenuItem
             // 
             this.graphicEditorToolStripMenuItem.Name = "graphicEditorToolStripMenuItem";
-            this.graphicEditorToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.graphicEditorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.graphicEditorToolStripMenuItem.Text = "Graphic Editor";
             this.graphicEditorToolStripMenuItem.Click += new System.EventHandler(this.GraphicEditorToolStripMenuItem_Click);
             // 
             // speakEditorToolStripMenuItem
             // 
             this.speakEditorToolStripMenuItem.Name = "speakEditorToolStripMenuItem";
-            this.speakEditorToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.speakEditorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.speakEditorToolStripMenuItem.Text = "Speak Editor";
             this.speakEditorToolStripMenuItem.Click += new System.EventHandler(this.SpeakEditorToolStripMenuItem_Click);
             // 
@@ -297,12 +306,12 @@
             this.nodePanel1.TabIndex = 3;
             this.nodePanel1.TabStop = false;
             // 
-            // createGMEToolStripMenuItem
+            // loadProjectToolStripMenuItem
             // 
-            this.createGMEToolStripMenuItem.Name = "createGMEToolStripMenuItem";
-            this.createGMEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.createGMEToolStripMenuItem.Text = "Create GME";
-            this.createGMEToolStripMenuItem.Click += new System.EventHandler(this.createGMEToolStripMenuItem_Click);
+            this.loadProjectToolStripMenuItem.Name = "loadProjectToolStripMenuItem";
+            this.loadProjectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadProjectToolStripMenuItem.Text = "Load Project";
+            this.loadProjectToolStripMenuItem.Click += new System.EventHandler(this.loadProjectToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -361,6 +370,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsProjectSettings;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem createGMEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadProjectToolStripMenuItem;
     }
 }
 

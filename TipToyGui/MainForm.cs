@@ -66,24 +66,7 @@ namespace TipToyGui
             lbFunctions.Items.AddRange(nodePanel1.GetNodes());
         }
 
-        private void RefreshRecentItems()
-        {
-            MenuRecent.DropDownItems.Clear();
-            foreach (var item in TTGRegistry.GetRecentProjectPath())
-            {
-                var mi = new ToolStripMenuItem(item);
-                mi.Click += (_, __) =>
-                {
-                    Project = OIDProject.Load(item);
-                    RefreshNodes();
-                    RefreshOid();
-
-                    if (lbOidCodes.Items != null && lbOidCodes.Items.Count > 0)
-                        lbOidCodes.SelectedIndex = 0;
-                };
-                MenuRecent.DropDownItems.Add(mi);
-            }
-        }
+       
 
         private void RefreshOid()
         {
@@ -306,5 +289,7 @@ namespace TipToyGui
             {
             }
         }
+
+       
     }
 }
