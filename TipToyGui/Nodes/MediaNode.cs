@@ -90,11 +90,17 @@ namespace TipToyGui.Nodes
 
         private void Sfw_Changed(object sender, FileSystemEventArgs e)
         {
-            comboBox.Items.Clear();
-            foreach (var item in Directory.GetFiles(sfw.Path))
+            if (this.InvokeRequired)
             {
-                var f = Path.GetFileNameWithoutExtension(item);
-                comboBox.Items.Add(f);
+                this.Invoke(new Action(() => {
+
+                    comboBox.Items.Clear();
+                    foreach (var item in Directory.GetFiles(sfw.Path))
+                    {
+                        var f = Path.GetFileNameWithoutExtension(item);
+                        comboBox.Items.Add(f);
+                    }
+                }));
             }
         }
 
