@@ -10,7 +10,7 @@ Now you should see the usage message from the tttool in the log box underneath.
 After setting up, you can use the TipToiGui for a Gui driven helper to assemble your YAML files or create oid-code images.
 
 You can also get started with a new project. 
-Use the node editor to define your logics, use the graphics editor to arrange your graphics in a scene, apply regions for your product-id and other oids. 
-Finally, you also able to export the scene in two pictures, one is your image arrangement, and the other ist the generated oid mask.
+Use the node editor to define your logics, use the graphics editor to arrange your graphics in a scene, apply polygon frames for your product-id and other oids. 
+Finally, you are also able to export the scene in two pictures, one is your image arrangement, and the other ist the generated oid mask.
 
 As a funny and maybe useful feature, you can also debug and play directly in the scene.
