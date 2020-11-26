@@ -19,9 +19,9 @@ Shortcuts in Graphics Editor
 - [1 - 7] different switch different modes
 
 Mouse Control in Graphics Editor
--[Right Click] select image or polygon area, also aktivate oid code in simulation mode
--[Left  Click] acts depend on the selected mode (like move image/vertice etc.)
--[Shift + Left CLick] move the selected polygon in the polygon-move mode
+- [Right Click] select image or polygon area, also aktivate oid code in simulation mode
+- [Left  Click] acts depend on the selected mode (like move image/vertice etc.)
+- [Shift + Left CLick] move the selected polygon in the polygon-move mode
 
 Shortcuts in TipToiGui
 - [Strg]+[S] Save Project
