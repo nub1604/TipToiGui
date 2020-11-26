@@ -14,3 +14,19 @@ Use the node editor to define your logics, use the graphics editor to arrange yo
 Finally, you are also able to export the scene in two pictures, one is your image arrangement, and the other ist the generated oid mask.
 
 As a funny and maybe useful feature, you can also debug and play directly in the scene.
+
+Shortcuts in Graphics Editor
+- [1 - 7] different switch different modes
+
+Mouse Control in Graphics Editor
+-[Right Click] select image or polygon area, also aktivate oid code in simulation mode
+-[Left  Click] acts depend on the selected mode (like move image/vertice etc.)
+-[Shift + Left CLick] move the selected polygon in the polygon-move mode
+
+Shortcuts in TipToiGui
+- [Strg]+[S] Save Project
+- [Strg]+[L] Load Project
+- [F7] Open Graphics Editor
+- [F6] Open Speech Editor
+
+more to come
