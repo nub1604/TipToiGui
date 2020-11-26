@@ -63,7 +63,7 @@
             this.groupBox2.Location = new System.Drawing.Point(10, 173);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(280, 74);
-            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Project Settings";
             // 
@@ -74,7 +74,7 @@
             this.btn.Location = new System.Drawing.Point(238, 45);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(36, 23);
-            this.btn.TabIndex = 5;
+            this.btn.TabIndex = 9;
             this.btn.Text = "...";
             this.btn.UseVisualStyleBackColor = true;
             this.btn.Click += new System.EventHandler(this.button1_Click);
@@ -86,7 +86,7 @@
             this.tbProjectName.Location = new System.Drawing.Point(93, 18);
             this.tbProjectName.Name = "tbProjectName";
             this.tbProjectName.Size = new System.Drawing.Size(181, 20);
-            this.tbProjectName.TabIndex = 4;
+            this.tbProjectName.TabIndex = 7;
             // 
             // tbProjectPath
             // 
@@ -95,7 +95,7 @@
             this.tbProjectPath.Location = new System.Drawing.Point(93, 47);
             this.tbProjectPath.Name = "tbProjectPath";
             this.tbProjectPath.Size = new System.Drawing.Size(139, 20);
-            this.tbProjectPath.TabIndex = 6;
+            this.tbProjectPath.TabIndex = 8;
             // 
             // label5
             // 
@@ -132,7 +132,7 @@
             this.groupBox1.Location = new System.Drawing.Point(10, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(280, 155);
-            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Yaml File Settings";
             // 
@@ -144,7 +144,7 @@
             this.comboBox1.Location = new System.Drawing.Point(93, 123);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(181, 21);
-            this.comboBox1.TabIndex = 11;
+            this.comboBox1.TabIndex = 5;
             // 
             // tbMediaPath
             // 
@@ -153,7 +153,7 @@
             this.tbMediaPath.Location = new System.Drawing.Point(93, 71);
             this.tbMediaPath.Name = "tbMediaPath";
             this.tbMediaPath.Size = new System.Drawing.Size(181, 20);
-            this.tbMediaPath.TabIndex = 10;
+            this.tbMediaPath.TabIndex = 3;
             this.tbMediaPath.Text = "Audio";
             // 
             // tbWelcome
@@ -163,7 +163,7 @@
             this.tbWelcome.Location = new System.Drawing.Point(93, 97);
             this.tbWelcome.Name = "tbWelcome";
             this.tbWelcome.Size = new System.Drawing.Size(181, 20);
-            this.tbWelcome.TabIndex = 3;
+            this.tbWelcome.TabIndex = 4;
             this.tbWelcome.Text = "Welcome";
             // 
             // tbComment
@@ -247,7 +247,7 @@
             this.button2.Location = new System.Drawing.Point(211, 253);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 23);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Ok";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
