@@ -133,7 +133,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "OId Codes";
+            this.label3.Text = "OID Codes";
             // 
             // menuStrip1
             // 
