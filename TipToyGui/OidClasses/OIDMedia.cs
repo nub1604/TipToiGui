@@ -22,7 +22,7 @@ namespace TipToyGui.OidClasses
         {
             b.Clear();
             b.Append(" P(");
-            b.Append($"m_{Name}");
+            b.Append($"{Name}");
             b.Append(")");
             return b.ToString();
         }
