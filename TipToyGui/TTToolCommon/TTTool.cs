@@ -23,10 +23,11 @@ namespace TipToyGui
         /// </summary>
         /// <param name="tttSettings"></param>
         /// <param name="code"></param>
-        public static string CreateOidCodes(TTToolSettings tttSettings, short code, string workdir ="")
+        public static string CreateOidCodes(TTToolSettings tttSettings, ushort code, string workdir ="", bool raw = false)
         {
             var path = TTGRegistry.Read("tttoolPath");
-            var arg = $"{ConvertSettingsToArguments(tttSettings)} oid-code {code}";
+            
+            var arg = $"{ConvertSettingsToArguments(tttSettings)} oid-code {(raw?"--raw ":"")}{code}";
             if (string.IsNullOrEmpty(workdir))
             {
                 CMD.GetMultiline(path, arg);
@@ -49,7 +50,7 @@ namespace TipToyGui
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <returns></returns>
-        public static string CreateOidCodes(TTToolSettings tttSettings, short from, short to, string workdir = "")
+        public static string CreateOidCodes(TTToolSettings tttSettings, ushort from, ushort to, string workdir = "")
         {
 
             if (from < to)

@@ -60,7 +60,7 @@ namespace TipToyGui.Dialogs
                     
 
 
-            Project.ProductID = (short)nupProductID.Value;
+            Project.ProductID = (ushort)nupProductID.Value;
             Project.Comment = tbComment.Text;
             Project.MediaPath = tbMediaPath.Text;
             Project.Welcome = tbWelcome.Text;

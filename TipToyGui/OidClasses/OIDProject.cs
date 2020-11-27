@@ -16,7 +16,7 @@ namespace TipToyGui
         public string Welcome { get; set; }
         public string Language { get; set; }
         public string Comment { get; set; }
-        public short ProductID { get; set; }
+        public ushort ProductID { get; set; }
         public string MediaPath { get; set; }
         public string ProjectPath { get; set; }
 

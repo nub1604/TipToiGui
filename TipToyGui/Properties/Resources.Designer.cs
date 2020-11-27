@@ -303,6 +303,26 @@ namespace TipToyGui.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap oid_65535_high {
+            get {
+                object obj = ResourceManager.GetObject("oid_65535_high", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap oid_65535_low {
+            get {
+                object obj = ResourceManager.GetObject("oid_65535_low", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sceneSave {
             get {
                 object obj = ResourceManager.GetObject("sceneSave", resourceCulture);

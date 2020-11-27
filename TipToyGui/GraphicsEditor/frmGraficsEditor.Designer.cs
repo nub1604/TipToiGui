@@ -111,7 +111,7 @@ namespace TipToyGui
             this.tbTTToolLog.Multiline = true;
             this.tbTTToolLog.Name = "tbTTToolLog";
             this.tbTTToolLog.ReadOnly = true;
-            this.tbTTToolLog.Size = new System.Drawing.Size(499, 56);
+            this.tbTTToolLog.Size = new System.Drawing.Size(499, 53);
             this.tbTTToolLog.TabIndex = 10;
             // 
             // panel1
@@ -121,7 +121,7 @@ namespace TipToyGui
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(813, 473);
+            this.panel1.Size = new System.Drawing.Size(794, 455);
             this.panel1.TabIndex = 13;
             // 
             // pbDrawSpace
@@ -182,7 +182,7 @@ namespace TipToyGui
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(220, 164);
+            this.groupBox2.Size = new System.Drawing.Size(216, 158);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "OID Codes";
@@ -200,14 +200,16 @@ namespace TipToyGui
             // 
             // lbOids
             // 
+            this.lbOids.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbOids.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbOids.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbOids.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbOids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbOids.FormattingEnabled = true;
-            this.lbOids.Location = new System.Drawing.Point(3, -60);
+            this.lbOids.Location = new System.Drawing.Point(3, 57);
             this.lbOids.Name = "lbOids";
-            this.lbOids.Size = new System.Drawing.Size(214, 221);
+            this.lbOids.Size = new System.Drawing.Size(210, 91);
             this.lbOids.TabIndex = 0;
             // 
             // groupBox1
@@ -219,7 +221,7 @@ namespace TipToyGui
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(220, 130);
+            this.groupBox1.Size = new System.Drawing.Size(216, 125);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Scenes";
@@ -233,7 +235,7 @@ namespace TipToyGui
             this.lbScenes.FormattingEnabled = true;
             this.lbScenes.Location = new System.Drawing.Point(3, 16);
             this.lbScenes.Name = "lbScenes";
-            this.lbScenes.Size = new System.Drawing.Size(214, 111);
+            this.lbScenes.Size = new System.Drawing.Size(210, 106);
             this.lbScenes.TabIndex = 0;
             // 
             // groupBox3
@@ -243,7 +245,7 @@ namespace TipToyGui
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(508, 97);
+            this.groupBox3.Size = new System.Drawing.Size(508, 94);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "tttool Log";
@@ -272,7 +274,7 @@ namespace TipToyGui
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1037, 36);
+            this.toolStrip1.Size = new System.Drawing.Size(1014, 36);
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -453,8 +455,8 @@ namespace TipToyGui
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1037, 574);
-            this.splitContainer1.SplitterDistance = 813;
+            this.splitContainer1.Size = new System.Drawing.Size(1014, 553);
+            this.splitContainer1.SplitterDistance = 794;
             this.splitContainer1.TabIndex = 16;
             // 
             // splitContainer4
@@ -471,8 +473,8 @@ namespace TipToyGui
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer4.Size = new System.Drawing.Size(813, 574);
-            this.splitContainer4.SplitterDistance = 473;
+            this.splitContainer4.Size = new System.Drawing.Size(794, 553);
+            this.splitContainer4.SplitterDistance = 455;
             this.splitContainer4.TabIndex = 0;
             // 
             // splitContainer2
@@ -489,8 +491,8 @@ namespace TipToyGui
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(220, 574);
-            this.splitContainer2.SplitterDistance = 130;
+            this.splitContainer2.Size = new System.Drawing.Size(216, 553);
+            this.splitContainer2.SplitterDistance = 125;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
@@ -511,8 +513,8 @@ namespace TipToyGui
             this.splitContainer3.Panel2.Controls.Add(this.btnMoveDownTTImage);
             this.splitContainer3.Panel2.Controls.Add(this.btnMoveUpTTImage);
             this.splitContainer3.Panel2.Controls.Add(this.btnNewTTImage);
-            this.splitContainer3.Size = new System.Drawing.Size(220, 440);
-            this.splitContainer3.SplitterDistance = 164;
+            this.splitContainer3.Size = new System.Drawing.Size(216, 424);
+            this.splitContainer3.SplitterDistance = 158;
             this.splitContainer3.TabIndex = 0;
             // 
             // lbTTImages
@@ -525,7 +527,7 @@ namespace TipToyGui
             this.lbTTImages.FormattingEnabled = true;
             this.lbTTImages.Location = new System.Drawing.Point(6, 3);
             this.lbTTImages.Name = "lbTTImages";
-            this.lbTTImages.Size = new System.Drawing.Size(183, 238);
+            this.lbTTImages.Size = new System.Drawing.Size(179, 225);
             this.lbTTImages.TabIndex = 5;
             this.lbTTImages.SelectedIndexChanged += new System.EventHandler(this.lbTTImages_SelectedIndexChanged);
             // 
@@ -534,7 +536,7 @@ namespace TipToyGui
             this.btnDelTTImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelTTImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelTTImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDelTTImage.Location = new System.Drawing.Point(194, 90);
+            this.btnDelTTImage.Location = new System.Drawing.Point(190, 90);
             this.btnDelTTImage.Name = "btnDelTTImage";
             this.btnDelTTImage.Size = new System.Drawing.Size(23, 23);
             this.btnDelTTImage.TabIndex = 4;
@@ -546,7 +548,7 @@ namespace TipToyGui
             this.btnMoveDownTTImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMoveDownTTImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoveDownTTImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnMoveDownTTImage.Location = new System.Drawing.Point(194, 61);
+            this.btnMoveDownTTImage.Location = new System.Drawing.Point(190, 61);
             this.btnMoveDownTTImage.Name = "btnMoveDownTTImage";
             this.btnMoveDownTTImage.Size = new System.Drawing.Size(23, 23);
             this.btnMoveDownTTImage.TabIndex = 4;
@@ -558,7 +560,7 @@ namespace TipToyGui
             this.btnMoveUpTTImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMoveUpTTImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoveUpTTImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnMoveUpTTImage.Location = new System.Drawing.Point(194, 32);
+            this.btnMoveUpTTImage.Location = new System.Drawing.Point(190, 32);
             this.btnMoveUpTTImage.Name = "btnMoveUpTTImage";
             this.btnMoveUpTTImage.Size = new System.Drawing.Size(23, 23);
             this.btnMoveUpTTImage.TabIndex = 4;
@@ -570,7 +572,7 @@ namespace TipToyGui
             this.btnNewTTImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNewTTImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewTTImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnNewTTImage.Location = new System.Drawing.Point(194, 3);
+            this.btnNewTTImage.Location = new System.Drawing.Point(190, 3);
             this.btnNewTTImage.Name = "btnNewTTImage";
             this.btnNewTTImage.Size = new System.Drawing.Size(23, 23);
             this.btnNewTTImage.TabIndex = 4;
@@ -584,9 +586,9 @@ namespace TipToyGui
             this.tslblMouseReal,
             this.tslblMouseWorld,
             this.tslblState});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 588);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 567);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1037, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1014, 22);
             this.statusStrip1.TabIndex = 17;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -611,7 +613,7 @@ namespace TipToyGui
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1037, 610);
+            this.ClientSize = new System.Drawing.Size(1014, 589);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);

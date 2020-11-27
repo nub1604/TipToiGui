@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using TipToyGui.Common;
+using TipToyGui.Dialogs;
 using TipToyGui.Properties;
 
 namespace TipToyGui
@@ -107,16 +108,18 @@ namespace TipToyGui
             {
                 TTToolSettings tTToolSettings = new TTToolSettings();
 
-
+               
                 tTToolSettings.DPI = selectedScene.ResolutionDPI;
-                var res = MessageBox.Show(this, "Generate Oid Pixel by Pixel, takes ~2min", "", MessageBoxButtons.YesNoCancel);
-                if (res == DialogResult.Yes)
+                using (var f = new frmImageExport())
                 {
-                    MaskPicture.CreateImage(MainForm.Project, selectedScene, tTToolSettings, true);
-                }
-                else if ( res == DialogResult.No)
-                {
-                    MaskPicture.CreateImage(MainForm.Project, selectedScene, tTToolSettings, false);
+                    if (f.ShowDialog() == DialogResult.OK)
+                    {
+                        Cursor.Current = Cursors.WaitCursor;
+
+                            MaskPicture.ExportTTImages(MainForm.Project, selectedScene, tTToolSettings, f.Highquality, f.ExportCanvasImage, f.ExportMask, f.enumNeutral);
+                        
+                        Cursor.Current = Cursors.Default;
+                    }
                 }
             }
         }

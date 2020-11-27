@@ -63,11 +63,11 @@ namespace TipToyGui.Dialogs
             string result;
             if (string.IsNullOrWhiteSpace(tbWorkingDirectory.Text))
             {
-                result = TTTool.CreateOidCodes(tset, (short)nupCode.Value );
+                result = TTTool.CreateOidCodes(tset, (ushort)nupCode.Value );
             }
             else
             {
-                result = TTTool.CreateOidCodes(tset, (short)nupCode.Value, tbWorkingDirectory.Text);
+                result = TTTool.CreateOidCodes(tset, (ushort)nupCode.Value, tbWorkingDirectory.Text);
             }
 
 

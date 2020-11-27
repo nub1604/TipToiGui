@@ -63,6 +63,12 @@
     <Compile Include="CustomControls\NumUpDown.Designer.cs">
       <DependentUpon>NumUpDown.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\frmImageExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmImageExport.Designer.cs">
+      <DependentUpon>frmImageExport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\frmSpeak.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,9 @@
     <Compile Include="TTToolCommon\TTImage.cs" />
     <Compile Include="TTToolCommon\TTTool.cs" />
     <Compile Include="TTToolCommon\TTToolSettings.cs" />
+    <EmbeddedResource Include="Dialogs\frmImageExport.resx">
+      <DependentUpon>frmImageExport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\frmSpeak.resx">
       <DependentUpon>frmSpeak.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,6 +458,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sceneSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oid-65535-low.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oid-65535-high.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

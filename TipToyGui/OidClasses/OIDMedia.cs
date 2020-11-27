@@ -8,8 +8,6 @@ namespace TipToyGui.OidClasses
 {
     public class OIDMedia : IOIDAction
     {
-
-
         private static StringBuilder b = new StringBuilder();
 
         string Name;
