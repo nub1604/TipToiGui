@@ -30,14 +30,15 @@
         {
             this.lbRegister = new System.Windows.Forms.ListBox();
             this.lbFunctions = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.registerListLabel = new System.Windows.Forms.Label();
+            this.functionsListlabel = new System.Windows.Forms.Label();
             this.lbOidCodes = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.oidListLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuRecent = new System.Windows.Forms.ToolStripMenuItem();
             this.tsProjectSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -54,7 +55,6 @@
             this.tbStatusLabel = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.nodePanel1 = new TipToyGui.NodePanel();
-            this.loadProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nodePanel1)).BeginInit();
@@ -91,26 +91,26 @@
             this.lbFunctions.TabIndex = 2;
             this.lbFunctions.TabStop = false;
             // 
-            // label1
+            // registerListLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(9, 234);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Register";
+            this.registerListLabel.AutoSize = true;
+            this.registerListLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.registerListLabel.Location = new System.Drawing.Point(9, 234);
+            this.registerListLabel.Name = "registerListLabel";
+            this.registerListLabel.Size = new System.Drawing.Size(46, 13);
+            this.registerListLabel.TabIndex = 2;
+            this.registerListLabel.Text = "Register";
             // 
-            // label2
+            // functionsListlabel
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(9, 450);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Functions";
+            this.functionsListlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.functionsListlabel.AutoSize = true;
+            this.functionsListlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.functionsListlabel.Location = new System.Drawing.Point(9, 450);
+            this.functionsListlabel.Name = "functionsListlabel";
+            this.functionsListlabel.Size = new System.Drawing.Size(53, 13);
+            this.functionsListlabel.TabIndex = 3;
+            this.functionsListlabel.Text = "Functions";
             // 
             // lbOidCodes
             // 
@@ -125,15 +125,15 @@
             this.lbOidCodes.TabIndex = 0;
             this.lbOidCodes.TabStop = false;
             // 
-            // label3
+            // oidListLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label3.Location = new System.Drawing.Point(9, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "OID Codes";
+            this.oidListLabel.AutoSize = true;
+            this.oidListLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.oidListLabel.Location = new System.Drawing.Point(9, 31);
+            this.oidListLabel.Name = "oidListLabel";
+            this.oidListLabel.Size = new System.Drawing.Size(59, 13);
+            this.oidListLabel.TabIndex = 2;
+            this.oidListLabel.Text = "OID Codes";
             // 
             // menuStrip1
             // 
@@ -175,6 +175,13 @@
             this.saveProjectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveProjectToolStripMenuItem.Text = "Save Project";
             this.saveProjectToolStripMenuItem.Click += new System.EventHandler(this.SaveProjectToolStripMenuItem_Click);
+            // 
+            // loadProjectToolStripMenuItem
+            // 
+            this.loadProjectToolStripMenuItem.Name = "loadProjectToolStripMenuItem";
+            this.loadProjectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadProjectToolStripMenuItem.Text = "Load Project";
+            this.loadProjectToolStripMenuItem.Click += new System.EventHandler(this.loadProjectToolStripMenuItem_Click);
             // 
             // MenuRecent
             // 
@@ -245,28 +252,28 @@
             // setupToolStripMenuItem
             // 
             this.setupToolStripMenuItem.Name = "setupToolStripMenuItem";
-            this.setupToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.setupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.setupToolStripMenuItem.Text = "Setup";
             this.setupToolStripMenuItem.Click += new System.EventHandler(this.SetupToolStripMenuItem_Click);
             // 
             // assembleExportToolStripMenuItem
             // 
             this.assembleExportToolStripMenuItem.Name = "assembleExportToolStripMenuItem";
-            this.assembleExportToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.assembleExportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.assembleExportToolStripMenuItem.Text = "Assemble / Export";
             this.assembleExportToolStripMenuItem.Click += new System.EventHandler(this.AssembleExportToolStripMenuItem_Click);
             // 
             // createOIDToolStripMenuItem
             // 
             this.createOIDToolStripMenuItem.Name = "createOIDToolStripMenuItem";
-            this.createOIDToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.createOIDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createOIDToolStripMenuItem.Text = "CreateOID";
             this.createOIDToolStripMenuItem.Click += new System.EventHandler(this.CreateOIDToolStripMenuItem_Click);
             // 
             // playYamlToolStripMenuItem
             // 
             this.playYamlToolStripMenuItem.Name = "playYamlToolStripMenuItem";
-            this.playYamlToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.playYamlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.playYamlToolStripMenuItem.Text = "Play Yaml";
             this.playYamlToolStripMenuItem.Click += new System.EventHandler(this.PlayYamlToolStripMenuItem_Click);
             // 
@@ -306,13 +313,6 @@
             this.nodePanel1.TabIndex = 3;
             this.nodePanel1.TabStop = false;
             // 
-            // loadProjectToolStripMenuItem
-            // 
-            this.loadProjectToolStripMenuItem.Name = "loadProjectToolStripMenuItem";
-            this.loadProjectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loadProjectToolStripMenuItem.Text = "Load Project";
-            this.loadProjectToolStripMenuItem.Click += new System.EventHandler(this.loadProjectToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,9 +321,9 @@
             this.ClientSize = new System.Drawing.Size(836, 609);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbStatusLabel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.functionsListlabel);
+            this.Controls.Add(this.oidListLabel);
+            this.Controls.Add(this.registerListLabel);
             this.Controls.Add(this.lbOidCodes);
             this.Controls.Add(this.lbFunctions);
             this.Controls.Add(this.lbRegister);
@@ -346,10 +346,10 @@
 
         private System.Windows.Forms.ListBox lbRegister;
         private System.Windows.Forms.ListBox lbFunctions;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label registerListLabel;
+        private System.Windows.Forms.Label functionsListlabel;
         private System.Windows.Forms.ListBox lbOidCodes;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label oidListLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
