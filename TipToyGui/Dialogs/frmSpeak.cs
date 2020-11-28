@@ -64,12 +64,8 @@ namespace TipToyGui.Dialogs
                 textBox1.Text = MainForm.Project.SpeakObjects[listBox1.SelectedIndex].Name;
                 textBox2.Text = MainForm.Project.SpeakObjects[listBox1.SelectedIndex].Text;
                 comboBox1.SelectedItem = MainForm.Project.SpeakObjects[listBox1.SelectedIndex].Lang;
-
-
-
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             int i = MainForm.Project.SpeakObjects.Count + 1;

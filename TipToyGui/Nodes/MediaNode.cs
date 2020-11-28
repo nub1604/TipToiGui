@@ -13,7 +13,7 @@ namespace TipToyGui.Nodes
     {
         public ConnectionPoint Output { get; private set; }
         private ComboBox comboBox;
-        private FileSystemWatcher sfw;
+       
 
         public MediaNode()
         {
@@ -34,15 +34,7 @@ namespace TipToyGui.Nodes
 
             if (MainForm.Project != null)
             {
-                string ps = "\\";
-                string p = $"{MainForm.Project.ProjectPath}{ps}{MainForm.Project.MediaPath.Replace(ps, "")}";
-                if (Directory.Exists(p))
-                {
-                    sfw = new FileSystemWatcher(p);
-                    sfw.Changed += Sfw_Changed;
-                    sfw.NotifyFilter = NotifyFilters.Size;
-                    sfw.EnableRaisingEvents = true;
-                }
+
             }
 
             comboBox = new ComboBox
@@ -51,11 +43,8 @@ namespace TipToyGui.Nodes
                 Width = this.Width / 2
 
             };
-            foreach (var item in Directory.GetFiles(sfw.Path))
-            {
-              var f =  Path.GetFileNameWithoutExtension(item);
-                comboBox.Items.Add(f);
-            }           
+            comboBox.Items.AddRange(MainForm.Project.MediaFiles.ToArray());
+                  
            
 
             comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -86,22 +75,6 @@ namespace TipToyGui.Nodes
                     RaiseMessageEvent(new MessageEventArgs($"{oID.GetActionString}"));
                 }
             };
-        }
-
-        private void Sfw_Changed(object sender, FileSystemEventArgs e)
-        {
-            if (this.InvokeRequired)
-            {
-                this.Invoke(new Action(() => {
-
-                    comboBox.Items.Clear();
-                    foreach (var item in Directory.GetFiles(sfw.Path))
-                    {
-                        var f = Path.GetFileNameWithoutExtension(item);
-                        comboBox.Items.Add(f);
-                    }
-                }));
-            }
         }
 
         public override void Reconnect(ConnectionPoint[] connectionPoints)
@@ -139,7 +112,7 @@ namespace TipToyGui.Nodes
 
             if (this.comboBox.SelectedItem != null)
             {
-                return new OIDMedia(this.comboBox.SelectedItem.ToString()); 
+                return new OIDMedia((MediaFile)this.comboBox.SelectedItem); 
             }
             if (validate)
                 Flash(this, 500, Color.Red, 3);

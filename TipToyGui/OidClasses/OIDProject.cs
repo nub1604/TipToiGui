@@ -25,6 +25,7 @@ namespace TipToyGui
 
         public List<OIDSpeak> SpeakObjects = new List<OIDSpeak>();
         public List<Scene> Scenes = new List<Scene>();
+        public List<MediaFile> MediaFiles = new List<MediaFile>();
 
         public void Save()
         {
@@ -99,7 +100,29 @@ namespace TipToyGui
             if (!string.IsNullOrWhiteSpace(Comment)) sb.Append("comment: ").AppendLine(Comment.ToString());
             if (!string.IsNullOrWhiteSpace(Welcome))
             {
-                sb.Append("welcome: ").AppendLine(Welcome.ToString());
+                string welcomefiles ="";
+                var splits = Welcome.Split(',');
+                foreach (var item in splits)
+                {
+                    string temp = welcomefiles == ""?"": $"{welcomefiles},";
+                    var med = MediaFiles.Where(x => x.EditorEditorName == item).FirstOrDefault();
+                    if (med != null)
+                    {
+                        welcomefiles = $"{temp}m_{med.HashValue}";
+                        continue;
+                    }
+                    var speech = SpeakObjects.Where(x => x.Name == item).FirstOrDefault();
+                    if (speech != null)
+                    {
+                        welcomefiles = $"{temp}sp_{speech.Name}";
+                        continue;
+                    }
+
+                }
+
+
+                if (!string.IsNullOrEmpty(welcomefiles))
+                sb.Append("welcome: ").AppendLine(welcomefiles);
             }
 
             if (oIDRegisters.Count > 0)

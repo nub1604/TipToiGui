@@ -10,17 +10,17 @@ namespace TipToyGui.OidClasses
     {
         private static StringBuilder b = new StringBuilder();
 
-        string Name;
-        public OIDMedia(string name)
+        MediaFile Media;
+        public OIDMedia(MediaFile media)
         {
-            Name = name;
+            Media = media;
         }
 
         private string createString()
         {
             b.Clear();
             b.Append(" P(");
-            b.Append($"{Name}");
+            b.Append($"m_{Media.HashValue}");
             b.Append(")");
             return b.ToString();
         }

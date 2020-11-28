@@ -108,7 +108,7 @@ namespace TipToyGui
             {
                 SaveActualSetup();
             }
-            if (selectedOidNode != actualOidNode)
+            if (selectedOidNode != actualOidNode || sender == null)
             {
                 LoadSetup(selectedOidNode);
             }
@@ -238,6 +238,13 @@ namespace TipToyGui
                 createYamlToolStripMenuItem.PerformClick();
             }
 
+            if (keyData == (Keys.F5))
+            {
+                if (Project != null)
+                {
+                    mediaManagerToolStripMenuItem.PerformClick();
+                }
+            }
             if (keyData == (Keys.F6))
             {
                 if (Project != null)

@@ -169,7 +169,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmSpeak";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Set Comment";
+            this.Text = "Speech Editor";
             this.ResumeLayout(false);
             this.PerformLayout();
 

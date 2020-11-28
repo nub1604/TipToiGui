@@ -63,6 +63,7 @@ namespace TipToyGui.Common
         {
             if (TTToolExe != null)
             {
+                TTToolExe.Kill();
                 TTToolExe.Dispose();
                 TTToolExe = null;
             }

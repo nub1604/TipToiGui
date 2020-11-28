@@ -69,6 +69,12 @@
     <Compile Include="Dialogs\frmImageExport.Designer.cs">
       <DependentUpon>frmImageExport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\FrmMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmMedia.Designer.cs">
+      <DependentUpon>FrmMedia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\frmSpeak.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MaskPicture.cs" />
+    <Compile Include="MediaFile.cs" />
     <Compile Include="Nodes\TimerNode.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -269,6 +276,9 @@
     <Compile Include="TTToolCommon\TTToolSettings.cs" />
     <EmbeddedResource Include="Dialogs\frmImageExport.resx">
       <DependentUpon>frmImageExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmMedia.resx">
+      <DependentUpon>FrmMedia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\frmSpeak.resx">
       <DependentUpon>frmSpeak.cs</DependentUpon>

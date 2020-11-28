@@ -58,59 +58,70 @@ namespace TipToyGui
         }
         private void GraphicEditorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Project == null) return;
             using (var s = new FrmGraphicsEditor())
             {
                 s.ShowDialog();
             }
+
         }
         private void SaveProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Project != null)
-            {
-                Project.Save();
+            if (Project == null) return;
+            Project.Save();
                 RefreshRecentItems();
             }
-        }
+        
 
         private void SpeakEditorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Project == null) return;
             using (var s = new FrmSpeak())
             {
                 s.ShowDialog();
             }
 
         }
+        private void mediaManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Project == null) return;
+            using (var s = new FrmMedia())
+            {
+                s.ShowDialog();
+            }
+            LbOidCodes_SelectedIndexChanged(null, null);
+
+        }
         private void createYamlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ( Project != null)
-            {
+            if (Project == null) return;
+            
                 Project.SaveYaml();
-            }
+            
         }
         private void createGMEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ( Project != null)
-            {
-                Project.CreateGME();
-            } 
+            if (Project == null) return;
+            Project.CreateGME();
+           
+
         }
 
 
         private void tsProjectSettings_Click(object sender, EventArgs e)
         {
-            if (Project != null)
+            if (Project == null) return;
+            using (var s = new FrmProject(Project))
             {
-                using (var s = new FrmProject(Project))
+                if (s.ShowDialog() == DialogResult.OK)
                 {
-                    if (s.ShowDialog() == DialogResult.OK)
-                    {
-                        Project = s.Project;
-                        tbStatusLabel.Text = "Project Settings Changed";
-                    }
+                    Project = s.Project;
+                    tbStatusLabel.Text = "Project Settings Changed";
                 }
-                Flash(tbStatusLabel, 500, Color.Green, 3);
             }
+            Flash(tbStatusLabel, 500, Color.Green, 3);
         }
+        
         private void RefreshRecentItems()
         {
             MenuRecent.DropDownItems.Clear();

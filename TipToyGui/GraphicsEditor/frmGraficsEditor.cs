@@ -386,8 +386,6 @@ namespace TipToyGui
             }
         }
 
-       
-
         private void PlayTTTool_OnRaiseMessageEvent(object sender, Nodes.BaseNode.MessageEventArgs e)
         {
             if (IsHandleCreated)
