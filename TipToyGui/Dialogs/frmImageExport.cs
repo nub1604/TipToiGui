@@ -33,7 +33,8 @@ namespace TipToyGui.Dialogs
             ExportCanvasImage = checkBox1.Checked;
             enumNeutral = (EnumNeutralOid)(comboBox1.SelectedItem?? EnumNeutralOid.none);
             ExportMask = checkBox2.Checked;
-            Highquality = checkBox3.Checked;
+            //allways perfect for some reasons
+            Highquality = false; //checkBox3.Checked;
             DialogResult = DialogResult.OK;
         }
 

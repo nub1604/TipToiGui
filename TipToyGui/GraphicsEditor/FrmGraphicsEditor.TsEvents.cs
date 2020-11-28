@@ -116,7 +116,7 @@ namespace TipToyGui
                     {
                         Cursor.Current = Cursors.WaitCursor;
 
-                            MaskPicture.ExportTTImages(MainForm.Project, selectedScene, tTToolSettings, f.Highquality, f.ExportCanvasImage, f.ExportMask, f.enumNeutral);
+                        MaskPicture.ExportTTImages(MainForm.Project, selectedScene, tTToolSettings, f.Highquality, f.ExportCanvasImage, f.ExportMask, f.enumNeutral);
                         
                         Cursor.Current = Cursors.Default;
                     }

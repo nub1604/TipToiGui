@@ -117,7 +117,7 @@ namespace TipToyGui
             {
                 using (Graphics graphic = Graphics.FromImage(maskPicture))
                 {
-
+                    graphic.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
                     if (enumNeutral == EnumNeutralOid.mask)
                     {
                         CreateNeutralMask(maskPicture, scene, set, workdir);
@@ -135,6 +135,7 @@ namespace TipToyGui
                 {
                     using (Graphics graphic = Graphics.FromImage(maskPicture))
                     {
+                        graphic.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
                         CreateNeutralMask(maskPicture, scene, set, workdir);
                     }
                     maskPicture.Save(Path.Combine(destDir, $"{scene.Name}_neutral.png"), ImageFormat.Png);
@@ -189,7 +190,7 @@ namespace TipToyGui
                                 DrawFull(pl, (Bitmap)MaskImage, maskPicture, (int)x, (int)y);
                             else
                             {
-                                graphic.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
+                               
                                 graphic.DrawImage(MaskImage, (int)x, (int)y, width, height);
                             }
                         }
