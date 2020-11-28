@@ -33,7 +33,7 @@ Shortcuts in TipToiGui
 Important note for working with media files
 - you have to use the media manager instead of putting the files into the audio folder
 - Media Files that were not imported with the Media Manager are ignored
-- at the moment, you have to validate the correct file format by yourself
+- at the moment, you have to validate the correct file format by yourself (Mono, 22050Hz)
 
 Important note for using the "Welcome" field in the project settings
 - Now, you can use the media name from a media file, which you can find in the Media Manager or the Speak Editor
