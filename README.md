@@ -30,4 +30,12 @@ Shortcuts in TipToiGui
 - [F6] Open Speech Editor
 - [F5] Open Media Manager
 
-more to come
+Important note for working with media files
+- you have to use the media manager instead of putting the files into the audio folder
+- Media Files that were not imported with the Media Manager are ignored
+- at the moment, you have to validate the correct file format by yourself
+
+Important note for using the "Welcome" field in the project settings
+- Now, you can use the media name from a media file, which you can find in the Media Manager or the Speak Editor
+- you also can put multiple sound files together by separating it with a comma
+- keep in mind, if you want to use a "speak-name" which has the same name as a media file, the program chooses the media file
