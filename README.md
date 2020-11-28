@@ -25,8 +25,9 @@ Mouse Control in Graphics Editor
 
 Shortcuts in TipToiGui
 - [Strg]+[S] Save Project
-- [Strg]+[L] Load Project
+- [Strg]+[L] Load Last Project
 - [F7] Open Graphics Editor
 - [F6] Open Speech Editor
+- [F5] Open Media Manager
 
 more to come
