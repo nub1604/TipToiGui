@@ -38,3 +38,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,dotnetcore
+SetupTipToiGui/Debug/setup.exe
+.vs/TipToyGui/v16/.suo
